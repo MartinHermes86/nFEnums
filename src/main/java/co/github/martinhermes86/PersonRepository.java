@@ -43,4 +43,14 @@ public class PersonRepository {
         System.out.println("Diverse: " + countDiverse);
     }
 
+    public List<Person> findPersonsByFavoriteDay(DaysOfWeek day) {
+        List<Person> personsByDay = new ArrayList<>();
+        for (Person person : persons) {
+            if (person.favoriteDay() == day) {
+                personsByDay.add(person);
+            }
+        }
+        return personsByDay;
+    }
+
 }
