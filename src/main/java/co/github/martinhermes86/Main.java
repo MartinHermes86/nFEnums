@@ -17,5 +17,7 @@ public class Main {
         System.out.println(personRepository.findPersonById(4));
 
         personRepository.countPersonsByGenders();
+
+        personRepository.findPersonsByFavoriteDay(DaysOfWeek.TUESDAY).forEach(System.out::println);
     }
 }
